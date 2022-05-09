@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, Form, ToastContainer } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Login.css'
 
 const Login = () => {
     return (
         <div className='container login'>
         <h2 className='my-4 text-info'>Login</h2>
-        <Form className='login-form mx-auto'>
+        <Form className='login-form mx-auto w-50'>
             <Form.Group className="mb-3" controlId="formBasicEmail">
 
                 <Form.Control  type="email" name='email' placeholder="Enter email" required />
@@ -16,7 +17,7 @@ const Login = () => {
                 <Form.Control type="password" name='password' placeholder="Password" required />
             </Form.Group>
             
-            <Button className='btnlog btn btn-info text-light' variant="primary" type="submit">
+            <Button className='btnlog btn btnStyle text-light w-50' variant="primary" type="submit">
                 Login
             </Button>
             <p>Haven't any account?<Link to='/register' className='text-info text-decoration-none'> Please Register.</Link></p>
