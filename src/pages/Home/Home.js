@@ -6,6 +6,9 @@ const Home = () => {
             <div className="banner">
                 <img src={banner} className='w-100' style={{height:'600px'}} alt="" />
             </div>
+            <div>
+                <h2>Items</h2>
+            </div>
         </div>
     );
 };
