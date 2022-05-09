@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
+
 const Register = () => {
     const navigate = useNavigate();
     // create user 
@@ -12,7 +13,7 @@ const Register = () => {
         user,
         loading,
         error
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
     // privacy agree state
     const [agree, setAgree] = useState(false);
     // hanlde register form 
@@ -56,7 +57,7 @@ const Register = () => {
                 </div>
                 {errorMessage}
                 {loading}
-                <Button disabled={!agree} className='w-50 my-3 btn-info text-light' variant="primary" type="submit">
+                <Button disabled={!agree}  className='btnStyle w-50 my-3 btn  text-light'  type="submit">
                     Register
                 </Button>
                 <p>Already have an account?<Link className='text-info text-decoration-none' to='/login'> Please Login</Link></p>
