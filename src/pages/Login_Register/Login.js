@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { Button, Form, ToastContainer } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css'
+import Social from './Social/Social';
 
 const Login = () => {
     const navigate = useNavigate();
     // private route auth hook 
-    // const location = useLocation();
-    // const from = location.state?.from?.pathname || "/";
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     // log in by email password auth hook 
     const [
@@ -30,17 +31,13 @@ const Login = () => {
 
     
     // password reset auth hook 
-    const [sendPasswordResetEmail] = useSendPasswordResetEmail(
-        auth
-    )
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     const [email, setEmail] = useState();
 
-    // if (user) {
-    //     navigate(from, { replace: true })
-    // }
-    if(user){
-        navigate('/')
+    if (user) {
+        navigate(from, { replace: true })
     }
+    
 
     let errorMessage;
     if(error){
@@ -52,7 +49,7 @@ const Login = () => {
     }
     return (
         <div className='container login'>
-        <h2 className='my-4 text-info'>Login</h2>
+        <h2 className='my-4' style={{color:"#182D36"}}>Login</h2>
         <Form onSubmit={handleLoginSubmit} className='login-form mx-auto w-50'>
             <Form.Group className="mb-3" controlId="formBasicEmail">
 
@@ -77,6 +74,7 @@ const Login = () => {
                 }}  className='btn btn-link text-decoration-none text-success'>Reset Password</button></p>
         </Form>
         <ToastContainer />
+        <Social/>
 
     </div>
     );

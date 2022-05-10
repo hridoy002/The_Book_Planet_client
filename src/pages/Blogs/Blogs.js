@@ -19,6 +19,9 @@ const Blogs = () => {
                 <Accordion.Item eventKey="1">
                     <Accordion.Header>When should you use nodejs and when should you use Mongodb?</Accordion.Header>
                     <Accordion.Body>
+                        NodeJs: NodeJs is a js runtime environment.It used for sever side work.NodeJs is js backend technology.
+                        <br />
+                        Mongodb: Mongodb is a non relational database.It stored data.So when need to stored data,then mongodb are used.
                         
                     </Accordion.Body>
                 </Accordion.Item>

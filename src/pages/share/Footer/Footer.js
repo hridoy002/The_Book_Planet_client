@@ -4,7 +4,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <footer className='footer'>
-            <div>
+            <div className='text-start ms-5'>
                 <h4>HR Production</h4> <span style={{font:' 8px',marginTop:'-10px',display:'block',textAlign:'right'}}>Web Services</span> 
                 <p>Hotline</p>
                 <p>Corporate</p>

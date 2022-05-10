@@ -1,50 +1,62 @@
 [
     {
       "id": 1,
-      "name": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "description": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+      "img": "https://i.ibb.co/jyHHGCP/asman.jpg",
+      "name": "Asman",
+      "writer": "Latiful Islam Shibli",
+      "description": "A great book based on a true story.\n The book is writen about war-ton Afganistan.",
       "price": 340,
       "supplier": "somokalin",
       "quantity":3
     },
     {
       "id": 2,
-      "name": "qui est esse",
-      "description": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+      "img": "https://i.ibb.co/TvCjSG2/deshe.jpg",
+      "name": "Desh Bideshe",
+      "writer": "Soyed Mujtaba Ali",
+      "description": "This is a travel story written by Syed Mujtaba Ali, a fiction writer at home and abroad,\n based on a trip to Afghanistan from 1928 to 1929. It was published continuously in 'Desh' magazine from March 1948. This is the first book published by Syed Mujtaba Ali.Mujtaba Ali is a famous writer in Bangladesh",
       "price": 340,
       "supplier": "somokalin",
       "quantity":3
     },
     {
       "id": 3,
-      "name": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-      "description": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+      "name": "1971 Frontline Sera Operation",
+      "img": "https://i.ibb.co/N3V1Hfh/1971.jpg",
+      "writer": "Sartaj Alim",
+      "description": "The book is written about the war of independence of Bangladesh.Mirpur became independent 45 days after Bangladesh became independent. The Bihari allies of the Pak army and the defecting Pak army made Mirpur their base with weapons.",
       "price": 340,
       "supplier": "somokalin",
       "quantity":3
     },
     {
       "id": 4,
-      "name": "eum et est occaecati",
-      "description": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",
+      "name": "The Kingdom Of Outsider",
+      "img": "https://i.ibb.co/N3V1Hfh/1971.jpg",
+      "writer": "Sohel Rana",
+      "description": "The Kingdom of Outsiders will answer all that questions.\n1.Why Hitler's tortured Jewish\n2.How to Rothchild's family cnotrolled politics and economics and many more",
       "price": 340,
       "supplier": "somokalin",
       "quantity":3
     },
     {
       "id": 5,
-      "name": "nesciunt quas odio",
-      "description": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
-      "price": 340,
-      "supplier": "somokalin",
+      "name": "Zero Day (John Puller Series)",
+      "img": "https://i.ibb.co/N3V1Hfh/1971.jpg",
+      "writer": "David Valdacci",
+      "description": "Combat veteran and U. S. Army investigator John Puller is on the hunt for justice with the help of a homicide detective--but as they face deceptions and ...",
+      "price": 400,
+      "supplier": "Grand Center Publisher",
       "quantity":3
     },
     {
       "id": 6,
-      "name": "dolorem eum magni eos aperiam quia",
-      "description": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
+      "name": "Hell Commando",
+      "img": "https://i.ibb.co/N3V1Hfh/1971.jpg",
+      "writer": "Major Retired Anowar Hossain",
+      "description": "A commando made by enduring strict discipline, inhuman hard work, indescribable physical torture. Sometimes a young Bengali man descends into the rough sea, sometimes he jumps down from the infinite blue sky, sometimes he fights with death on a snow-capped mountain peak. He was startled by the smell of burning his own skin, sometimes gulped down with foul-smelling water, and ate dog meat out of hunger. He is one ..",
       "price": 340,
-      "supplier": "somokalin",
+      "supplier": "Sheba Prokashoni",
       "quantity":3
     }
 ]

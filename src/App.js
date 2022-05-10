@@ -8,6 +8,9 @@ import NotFound from './pages/NotFound/NotFound';
 import Footer from './pages/share/Footer/Footer';
 import Login from './pages/Login_Register/Login';
 import Register from './pages/Login_Register/Register/Register';
+import InventoryItem from './pages/InventoryItem/InventoryItem';
+import RequireAuth from './pages/RequireAuth/RequireAuth';
+import Inventory from './pages/Inventory/Inventory';
 
 function App() {
   return (
@@ -18,7 +21,9 @@ function App() {
         <Route path='/blogs' element={<Blogs/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
-
+        <Route path='/inventory' element={<RequireAuth>
+          <Inventory/>
+        </RequireAuth>} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
       <Footer/>

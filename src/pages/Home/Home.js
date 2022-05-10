@@ -5,10 +5,11 @@ import './Home.css'
 
 const Home = () => {
     const [items, setItems] = useState([]);
-    useEffect(() =>
-        {fetch('data.json')
-            .then(res => res.json())
-            .then(data => setItems(data))}
+    useEffect(() => {
+        fetch('data.json')
+        .then(res => res.json())
+        .then(data => setItems(data))
+    }
         , []);
     return (
         <div>
@@ -17,9 +18,14 @@ const Home = () => {
             </div>
             <div>
                 <h2>Items</h2>
-                {
-                    items.map(item => <li>{item.name}</li>)
-                }
+                <div className="cardContainer w-75 mx-auto">
+                    {
+                        items.map(item =>
+                            <InventoryItem className="row" key={item.id} item={item} />
+
+                        )
+                    }
+                </div>
             </div>
         </div>
     );
