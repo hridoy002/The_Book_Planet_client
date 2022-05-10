@@ -32,11 +32,14 @@ const Header = () => {
                         <Nav>
                             <Nav.Link as={Link} to='/'>Home</Nav.Link>
                             <Nav.Link as={Link} to='/blogs'>Blogs</Nav.Link>
-                            {user ? <button onClick={logout} style={{ color: "#182D36" }} className=' btn btn-light  fs-6 fw-bold'>Log Out</button> : <Nav.Link as={Link} to='login' >Login</Nav.Link>}
-                            <Nav.Link as={Link} to='register' >Sign UP</Nav.Link>
-                            <Nav.Link as={Link} to='inventory'>
-                                Inventory
+                            
+                            <Nav.Link as={Link} to=''>
+                                Manage Invantories
                             </Nav.Link>
+                            {user ? <button onClick={logout} style={{ color: "#182D36" }} className=' btn btn-light  fs-6 fw-bold'>Log Out</button> : <Nav.Link as={Link} to='login' >Login</Nav.Link> }
+                            {/* <Nav.Link as={Link} to='register' >Sign UP</Nav.Link> */}
+                            
+                            
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

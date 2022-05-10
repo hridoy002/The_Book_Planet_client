@@ -1,7 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './InventoryItem.css'
 const InventoryItem = ({ item }) => {
-    const { name, img,description,writer,price,quantity } = item;
+    const { _id,name, img,description,writer,price,quantity } = item;
+
+    const navigate = useNavigate()
+    const navigateItem = id => {
+        navigate(`/inventory/${id}`)}
+    
     return (
             <div className="card mb-3" style={{ maxWidth: "500px" }}>
                 <div className="row g-0">
@@ -17,7 +23,7 @@ const InventoryItem = ({ item }) => {
                             <p className="card-text">Price{price}</p>
                             <p className="card-text"><small className="text-muted">Quantity:{quantity}</small></p>
                         </div>
-                        <button className='btn btn-secondary'>Update</button>
+                        <button className='btn btn-secondary' onClick={() => navigateItem(_id)}>Update</button>
                     </div>
                 </div>
             </div>

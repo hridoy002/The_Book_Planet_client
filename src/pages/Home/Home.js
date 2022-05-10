@@ -6,7 +6,7 @@ import './Home.css'
 const Home = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('data.json')
+        fetch(`http://localhost:5000/items/`)
         .then(res => res.json())
         .then(data => setItems(data))
     }
@@ -21,7 +21,7 @@ const Home = () => {
                 <div className="cardContainer w-75 mx-auto">
                     {
                         items.map(item =>
-                            <InventoryItem className="row" key={item.id} item={item} />
+                            <InventoryItem className="row" key={item._id} item={item} />
 
                         )
                     }
