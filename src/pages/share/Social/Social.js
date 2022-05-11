@@ -4,7 +4,7 @@ import auth from '../../../firebase.init';
 import google from '../../../images/social/google.png'
 
 const Social = () => {
-    const [signInWithGoogle,user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, loading] = useSignInWithGoogle(auth);
     if(loading){
         return <p>Loading:{loading}</p>
     }

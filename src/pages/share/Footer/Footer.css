@@ -4,12 +4,43 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
 }
-
+.companyDetalis img{
+    width: 25px;
+    padding-right: 5px;
+}
 .social img{
     width: 40px;
     padding-right: 5px;
 }
 
+.social{
+    margin-bottom: 15px;
+}
+
+.page{
+    background-image: url(../../../images/social/footer_banner.jpg);
+    width: 92vh;
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.page button{
+     /* margin-top: 75px; */
+    /* margin-right:46px; */ 
+    border: none;
+    border-radius: 5px;
+    /* margin-bottom: 10px; */
+    /* margin-left: 40px; */
+}
+
+.copyright{
+    height: 50px;
+    text-align: center;
+    background-color: #133645;
+    color: aliceblue;
+}
 @media only screen and (max-width: 576px) {
     .footer {
         display: grid;

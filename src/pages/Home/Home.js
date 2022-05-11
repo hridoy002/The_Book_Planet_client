@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import banner from '../../images/banner/banner.jpg'
-import InventoryItem from '../InventoryItem/InventoryItem';
+import Products from '../Products/Products';
 import './Home.css'
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
                 <div className="cardContainer w-75 mx-auto">
                     {
                         items.map(item =>
-                            <InventoryItem className="row" key={item._id} item={item} />
+                            <Products className="row" key={item._id} item={item} />
 
                         )
                     }

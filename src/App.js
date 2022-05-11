@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
@@ -8,9 +7,11 @@ import NotFound from './pages/NotFound/NotFound';
 import Footer from './pages/share/Footer/Footer';
 import Login from './pages/Login_Register/Login';
 import Register from './pages/Login_Register/Register/Register';
-import InventoryItem from './pages/InventoryItem/InventoryItem';
+
 import RequireAuth from './pages/RequireAuth/RequireAuth';
-import Inventory from './pages/Inventory/Inventory';
+import UploadProduct from './pages/UploadProduct/UploadProduct';
+import ProductDetail from './pages/Products/ProductDetail/ProductDetail';
+import ManageInventories from './pages/ManageInvetories/ManageInventories';
 
 function App() {
   return (
@@ -21,8 +22,14 @@ function App() {
         <Route path='/blogs' element={<Blogs/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
-        <Route path='/inventory/:itemId' element={<RequireAuth>
-          <Inventory/>
+        <Route path='/productDetail/:itemId' element={<RequireAuth>
+          <ProductDetail/>
+        </RequireAuth>} />
+        <Route path='/uploadProduct' element={<RequireAuth>
+          <UploadProduct/>
+        </RequireAuth>} />
+        <Route path='/manageInventories' element={<RequireAuth>
+          <ManageInventories/>
         </RequireAuth>} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
