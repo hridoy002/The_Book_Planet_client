@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from 'react';
 import banner from '../../images/banner/banner.jpg'
+import useCustomHook from '../CustooHook/useCustomHook';
 import Products from '../Products/Products';
 import './Home.css'
 
 const Home = () => {
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        fetch(`http://localhost:5000/items/`)
-        .then(res => res.json())
-        .then(data => setItems(data))
-    }
-        , []);
+    const [items] = useCustomHook();
     return (
         <div>
             <div className="banner">
-                <img src={banner} className='w-100' style={{ height: '600px' }} alt="" />
+                <img src={banner} className='w-100' style={{ height: '20%' }} alt="" />
             </div>
             <div>
                 <h2>Items</h2>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './UploadProduct.css'
 const UploadProduct = () => {
     const handleSubmit= event =>{
         event.preventDefault();
@@ -15,7 +15,7 @@ const UploadProduct = () => {
         const book = {name,writer,description,publisher,price,quantity,img};
         
         // send data to server 
-        const url =`http://localhost:5000/manageInventory/`;
+        const url =`http://localhost:5000/items/`;
         fetch(url,{
             method:'POST',
             headers:{
@@ -43,7 +43,7 @@ const UploadProduct = () => {
                 <input className='mb-3' placeholder='Price' name='price' type="price" />
                 <input className='mb-3' placeholder='Quantity' name='quantity' />
                 
-                <input type="submit" />
+                <input type="submit" className='submit'/>
             </form>
         </div>
     );

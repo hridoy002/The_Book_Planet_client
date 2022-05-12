@@ -8,7 +8,7 @@ import Footer from './pages/share/Footer/Footer';
 import Login from './pages/Login_Register/Login';
 import Register from './pages/Login_Register/Register/Register';
 
-import RequireAuth from './pages/RequireAuth/RequireAuth';
+import RequireAuth from './pages/share/RequireAuth/RequireAuth';
 import UploadProduct from './pages/UploadProduct/UploadProduct';
 import ProductDetail from './pages/Products/ProductDetail/ProductDetail';
 import ManageInventories from './pages/ManageInvetories/ManageInventories';

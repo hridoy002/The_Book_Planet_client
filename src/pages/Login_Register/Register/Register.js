@@ -48,9 +48,10 @@ const Register = () => {
                     <Form.Control type="email" name="email" placeholder="Enter email" required />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-1" controlId="formBasicPassword">
                     <Form.Control type="password" name="password" placeholder="Password" required />
                 </Form.Group>
+                <li className='text-start mb-3'>Please Enter minimum 6 digit,alphabet or character</li>
 
 
                 <div style={{ textAlign: 'left', }}>
@@ -58,6 +59,7 @@ const Register = () => {
                 </div>
                 {errorMessage}
                 {loading}
+                
                 <Button disabled={!agree}  className='btnStyle w-50 my-3 btn  text-light'  type="submit">
                     Register
                 </Button>

@@ -1,6 +1,6 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Container, Nav, Navbar} from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -32,17 +32,27 @@ const Header = () => {
                         <Nav>
                             <Nav.Link as={Link} to='/'>Home</Nav.Link>
                             <Nav.Link as={Link} to='/blogs'>Blogs</Nav.Link>
-                            
+
                             <Nav.Link as={Link} to='/manageInventories'>
                                 Manage Inventories
                             </Nav.Link>
                             <Nav.Link as={Link} to='/uploadProduct'>
                                 Add Product
                             </Nav.Link>
-                            {user ? <button onClick={logout} style={{ color: "#182D36" }} className=' btn btn-light  fs-6 fw-bold'>Log Out</button> : <Nav.Link as={Link} to='login' >Login</Nav.Link> }
-                            {/* <Nav.Link as={Link} to='register' >Sign UP</Nav.Link> */}
-                            
-                            
+                            {user ? <button onClick={logout} style={{ color: "#182D36" }} className=' btn btn-light  fs-6 fw-bold'>Log Out</button> :
+                                <>
+                                    <Nav.Link as={Link} to='login' >Login</Nav.Link>
+                                    <Nav.Link as={Link} to='register' >Sign UP</Nav.Link>
+                                </>
+                            }
+                            {/* {
+                                !user && <>
+                                <Nav.Link as={Link} to='login' >Login</Nav.Link> 
+                                <Nav.Link as={Link} to='register' >Sign UP</Nav.Link>
+                                </>
+                            } */}
+
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
