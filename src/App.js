@@ -7,13 +7,21 @@ import NotFound from './pages/NotFound/NotFound';
 import Footer from './pages/share/Footer/Footer';
 import Login from './pages/Login_Register/Login';
 import Register from './pages/Login_Register/Register/Register';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import RequireAuth from './pages/share/RequireAuth/RequireAuth';
 import UploadProduct from './pages/UploadProduct/UploadProduct';
 import ProductDetail from './pages/Products/ProductDetail/ProductDetail';
 import ManageInventories from './pages/ManageInvetories/ManageInventories';
+import About from './pages/About/About';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(()=>{
+    AOS.init();
+  },
+  [])
   return (
     <div className="App">
       <Header/>
@@ -31,6 +39,7 @@ function App() {
         <Route path='/manageInventories' element={<RequireAuth>
           <ManageInventories/>
         </RequireAuth>} />
+        <Route path='/about' element={<About />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
       <Footer/>

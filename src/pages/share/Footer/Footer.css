@@ -8,6 +8,24 @@
     width: 25px;
     padding-right: 5px;
 }
+
+
+.links{
+    text-align: left;
+    padding-left: 50px;
+}
+.links a{
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.links li{
+    font-size: 14px;
+    cursor: pointer;
+}
 .social img{
     width: 40px;
     padding-right: 5px;
@@ -17,14 +35,18 @@
     margin-bottom: 15px;
 }
 
-.page{
+.copyright{
+    padding-top: 15px;
+}
+
+/* .page{
     background-image: url(../../../images/social/footer_banner.jpg);
     width: 92vh;
    
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-}
+} */
 
 .page button{
      /* margin-top: 75px; */
@@ -36,6 +58,7 @@
 }
 
 .copyright{
+    padding-top: 15px;
     height: 50px;
     text-align: center;
     background-color: #133645;
@@ -43,11 +66,16 @@
 }
 @media only screen and (max-width: 576px) {
     .footer {
+        margin: auto;
         display: grid;
         grid-template-columns: 1fr;
     }
 
+    .links{
+        margin-top: 20px;
+    }
     .socialConnect{
         padding-left: 48px;
+        margin-top: 20px;
     }
   }

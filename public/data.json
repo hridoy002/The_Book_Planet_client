@@ -26,17 +26,17 @@
       "writer": "Sartaj Alim",
       "description": "The book is written about the war of independence of Bangladesh.Mirpur became independent 45 days after Bangladesh became independent. The Bihari allies of the Pak army and the defecting Pak army made Mirpur their base with weapons.",
       "price": 340,
-      "supplier": "somokalin",
+      "supplier": "Odhoyon",
       "quantity":3
     },
     {
       "id": 4,
       "name": "The Kingdom Of Outsider",
-      "img": "https://i.ibb.co/N3V1Hfh/1971.jpg",
+      "img": "https://i.ibb.co/BZnbRzR/the-kingdom.png",
       "writer": "Sohel Rana",
       "description": "The Kingdom of Outsiders will answer all that questions.\n1.Why Hitler's tortured Jewish\n2.How to Rothchild's family cnotrolled politics and economics and many more",
-      "price": 340,
-      "supplier": "somokalin",
+      "price": 315,
+      "supplier": "Guardian Publicatons",
       "quantity":3
     },
     {
@@ -52,14 +52,14 @@
     {
       "id": 6,
       "name": "Hell Commando",
-      "img": "https://i.ibb.co/N3V1Hfh/1971.jpg",
+      "img": "https://i.ibb.co/bQsXkfy/commando.jpg",
       "writer": "Major Retired Anowar Hossain",
       "description": "A commando made by enduring strict discipline, inhuman hard work, indescribable physical torture. Sometimes a young Bengali man descends into the rough sea, sometimes he jumps down from the infinite blue sky, sometimes he fights with death on a snow-capped mountain peak. He was startled by the smell of burning his own skin, sometimes gulped down with foul-smelling water, and ate dog meat out of hunger. He is one ..",
       "price": 340,
       "supplier": "Sheba Prokashoni",
       "quantity":3
     }
-    },
+    ,
     { 
       "id": 7,
       "name": "হিমালয় দ্য সোর্ড অফ ফ্রে",

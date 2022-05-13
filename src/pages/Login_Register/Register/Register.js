@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Social from '../../share/Social/Social';
+import Loading from '../../Loading/Loading';
+import { ToastContainer,toast } from 'react-toastify';
 
 
 const Register = () => {
@@ -23,6 +25,9 @@ const Register = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         createUserWithEmailAndPassword(email, password);
+        if(email) {
+            toast('Sent email');
+        } 
     }
 
     // error message 
@@ -31,7 +36,7 @@ const Register = () => {
         errorMessage = <p className='text-danger' style={{ textAlign: 'left' }}>Error: {error?.message}</p>
     }
     if(loading){
-        return <p>Loading...</p>
+        return <Loading/>
     }
     // redirect to home
     if (user) {
@@ -66,6 +71,7 @@ const Register = () => {
                 <p>Already have an account?<Link className='text-info text-decoration-none' to='/login'> Please Login</Link></p>
             </Form>
             <Social />
+            <ToastContainer/>
         </div>
     );
 };

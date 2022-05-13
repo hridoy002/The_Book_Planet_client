@@ -4,7 +4,7 @@ import './ManageInventories.css'
 import { Link } from 'react-router-dom';
 
 const ManageInventories = () => {
-    const [items] = useCustomHook();
+    const [items,setItems] = useCustomHook();
     const handleDelete = id => {
         const accept = window.confirm('Are you sure want to delete?');
         if (accept) {
@@ -14,7 +14,11 @@ const ManageInventories = () => {
                 method: 'DELETE' 
             })
                 .then(res => res.json())
-                .then(data => console.log(data))
+                .then(data => {
+                    console.log(data)
+                    const otherItem = items.filter(item => item._id !== id);
+                    setItems(otherItem)
+                })
         }
     }
     return (
@@ -43,7 +47,7 @@ const ManageInventories = () => {
                                         <td><img src={item.img} style={{ width: "40px" }} alt="" /></td>
 
                                         <td>{item.writer}</td>
-                                        <td>{item.supplier}</td>
+                                        <td>{item.publisher}</td>
                                         <td>{item.price}</td>
 
                                         <td>{item.quantity}</td>
@@ -56,9 +60,44 @@ const ManageInventories = () => {
                 </table>
             </div>
 
-            <button className='btn addbtn w-50 mb-5' > <Link to={'/uploadProduct'}>Add New Product</Link></button>
+            <Link to={'/uploadProduct'}> <button className='btn addbtn w-50 mb-5' > Add New Product</button> </Link>
         </div>
     );
 };
 
 export default ManageInventories;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+// hridoy002
+// yNx5hHSlHPrKpmGR
+
+
+
+
+
+
+
+
+

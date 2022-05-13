@@ -1,24 +1,85 @@
 import banner from '../../images/banner/banner.jpg'
 import useCustomHook from '../CustooHook/useCustomHook';
 import Products from '../Products/Products';
+import arif from '../../images/author/arif.jpg'
+import abulasad from '../../images/author/abulasad.jpg'
+import sofa from '../../images/author/ahmadSofa.jpg'
+import humayun from '../../images/author/humayun.jpg'
+import jahangir from '../../images/author/jahangir.jpg'
+
+import reading from "../../images/reading.jpg"
 import './Home.css'
 
 const Home = () => {
     const [items] = useCustomHook();
+    const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }, { name: 'Page A', uv: 400, pv: 2400, amt: 2400 }, { name: 'Page A', uv: 400, pv: 2400, amt: 2400 }, { name: 'Page A', uv: 400, pv: 2400, amt: 2400 }, { name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
     return (
         <div>
+            {/* banner section  */}
             <div className="banner">
-                <img src={banner} className='w-100' style={{ height: '20%' }} alt="" />
+                <img src={banner} className='w-100' style={{ height: '400px' }} alt="" />
             </div>
-            <div>
-                <h2>Items</h2>
+
+            {/*bonus part*/}
+            <div className='row container mx-auto my-5'>
+                <div data-aos="fade-down" data-aos-delay="70"
+                    data-aos-duration="1000" className='col-lg-6 col-12 text-start'>
+                    <h2> WHY YOU SHOULD READ EVERY DAY</h2>
+                    <p>There are so many benefits to reading books.
+
+                        But let's face it: It can be challenging to motivate ourselves to read a 382-page book when we can watch the movie, listen to the audiobook, or watch a YouTube video summary instead.
+
+                        Am I right?
+
+                        However, if most of your daily reading consists of social media posts, text messages, and news headlines, you're missing out.
+
+                        So, what are the benefits of reading books? </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="90"
+                    data-aos-duration="1500"
+                    className='col-12 col-lg-6'>
+                    <img className='w-100' src={reading} alt="" />
+                </div>
+            </div>
+
+            {/* Inventory Products  */}
+            <div className='mt-5'>
+                <h2 className='my-5'>Stock Products</h2>
                 <div className="cardContainer w-75 mx-auto">
                     {
-                        items.map(item =>
+                        items.slice(0, 6).map(item =>
                             <Products className="row" key={item._id} item={item} />
 
                         )
                     }
+                </div>
+            </div>
+
+            {/* bonus part chart */}
+            <div className='bg-light authors-container container'>
+                <h2 className='text-center'>Weekly Most Demanded Author</h2>
+                <div className='d-flex authors'>
+                    <div className='author'>
+                        <img src={arif} alt="" />
+                        <p>Arif Azad</p>
+                    </div>
+                    <div className='author'>
+                        <img src={abulasad} alt="" />
+                        <p>Abul Asad</p>
+                    </div>
+                    <div className='author'>
+                        <img src={sofa} alt="" />
+                        <p>Ahmad Sofa</p>
+                    </div>
+                    <div className='author'>
+                        <img src={humayun} alt="" />
+                        <p>Humayun Ahmed</p>
+                    </div>
+                    <div className='author'>
+                        <img src={jahangir} alt="" />
+                        <p>Dr. Khondakar Abdullah Jahangir</p>
+                    </div>
+
                 </div>
             </div>
         </div>

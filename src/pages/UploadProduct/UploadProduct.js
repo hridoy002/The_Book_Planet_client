@@ -1,5 +1,8 @@
 import React from 'react';
 import './UploadProduct.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const UploadProduct = () => {
     const handleSubmit= event =>{
         event.preventDefault();
@@ -26,7 +29,7 @@ const UploadProduct = () => {
         .then(res => res.json())
         .then(data => {
             console.log('success',data);
-            alert('Product Added');
+            toast('Product Added');
             event.target.reset()
     })
    };

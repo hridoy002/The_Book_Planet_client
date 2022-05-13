@@ -16,7 +16,7 @@ const Header = () => {
             <Link to='/blogs'>Blogs</Link> */}
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand href="#home">The Book Planet</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/">The Book Planet</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -37,8 +37,12 @@ const Header = () => {
                                 Manage Inventories
                             </Nav.Link>
                             <Nav.Link as={Link} to='/uploadProduct'>
-                                Add Product
+                                Upload Products
                             </Nav.Link>
+                            <Nav.Link as={Link} to='/about'>
+                                About Us
+                            </Nav.Link>
+
                             {user ? <button onClick={logout} style={{ color: "#182D36" }} className=' btn btn-light  fs-6 fw-bold'>Log Out</button> :
                                 <>
                                     <Nav.Link as={Link} to='login' >Login</Nav.Link>
@@ -51,7 +55,7 @@ const Header = () => {
                                 <Nav.Link as={Link} to='register' >Sign UP</Nav.Link>
                                 </>
                             } */}
-
+                        
 
                         </Nav>
                     </Navbar.Collapse>
