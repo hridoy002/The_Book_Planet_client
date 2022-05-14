@@ -25,7 +25,7 @@ const Select = () => {
 
         // data send to server 
 
-        const url = `http://localhost:5000/select`;
+        const url = `https://morning-chamber-68565.herokuapp.com/select`;
         fetch(url, {
             method: 'POST',
             headers: {

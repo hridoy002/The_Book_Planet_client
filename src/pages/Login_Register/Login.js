@@ -38,7 +38,9 @@ const Login = () => {
     const [email, setEmail] = useState();
 
     if (user) {
+        console.log(user)
         navigate(from, { replace: true })
+        
     }
 
 

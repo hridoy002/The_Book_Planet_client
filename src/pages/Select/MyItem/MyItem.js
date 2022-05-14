@@ -9,7 +9,7 @@ const MyItem = () => {
     const [myitems, setMyitems] = useState([]);
     useEffect(() => {
         const email = user.email;
-        fetch(`http://localhost:5000/select?email=${email}`)
+        fetch(`https://morning-chamber-68565.herokuapp.com/select?email=${email}`)
             .then(res => res.json())
             .then(data => setMyitems(data)
             )
@@ -19,7 +19,7 @@ const MyItem = () => {
             const accept = window.confirm('Are you sure want to delete?');
             if (accept) {
                 console.log('Delete a Product',id) 
-                fetch(`http://localhost:5000/select/${id}`, {
+                fetch(`https://morning-chamber-68565.herokuapp.com/select/${id}`, {
     
                     method: 'DELETE' 
                 })

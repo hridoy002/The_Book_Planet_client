@@ -1,10 +1,17 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import google from '../../../images/social/google.png'
 
 const Social = () => {
-    const [signInWithGoogle, loading] = useSignInWithGoogle(auth);
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+    const navigate = useNavigate();
+    const [signInWithGoogle,user, loading] = useSignInWithGoogle(auth);
+    if (user) {
+        navigate(from, { replace: true })
+    }
     if(loading){
         return <p>Loading:{loading}</p>
     }

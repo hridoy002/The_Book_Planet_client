@@ -34,11 +34,13 @@ const Register = () => {
         if(email) {
             toast('Please Check Your Email and Verify your account');
         } 
-
-        await createUserWithEmailAndPassword(email, password);
-        await updateProfile({ displayName: name });
-        console.log('Updated profile');
-        navigate('/home');
+        if(user){
+            console.log(user)
+        }
+         createUserWithEmailAndPassword(email, password);
+        // await updateProfile({ displayName: name });
+        // console.log('Updated profile');
+        // navigate('/home');
     }
 
     // error message 
@@ -79,6 +81,7 @@ const Register = () => {
                 <Button disabled={!agree}  className='btnStyle w-50 my-3 btn  text-light'  type="submit">
                     Register
                 </Button>
+                
                 <p>Already have an account?<Link className='text-info text-decoration-none' to='/login'> Please Login</Link></p>
             </Form>
             <Social/>

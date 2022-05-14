@@ -17,18 +17,18 @@ const RequireAuth = ({ children }) => {
         return <Navigate to='/login' state={{ from: location }} replace />
     }
 
-    if (user.providerData[0]?.providerId === 'password' && !user.emailVerified) {
+    if (user?.providerData[0]?.providerId === 'password' && !user?.emailVerified) {
         console.log(user)
-        return <div className='text-center mt-5'>
-            <h3 className='text-dark'> PLEASE VERIFY YOUR EMAIL ADDRESS</h3>
+        return <div className='text-center mt-5' style={{minHeight:'500px'}}>
+            <p className='fs-3'> If You miss previous Verification message.Please send again verification message.</p>
             <button
-            className='btn btn-success'
+            className='btn btn-success my-auto'
                 onClick={async () => {
                     await sendEmailVerification();
                     toast('Email Verify');
                 }}
             >
-                Send Verification Email Again
+                Resend Verification Message
             </button>    
             <ToastContainer/>
         </div>

@@ -12,4 +12,4 @@ This is a products inventory management web application.A book store authority c
 - Here use Firebase authentication system,it helps you very much.
 
 - You can add your sell details
-- Using Special technolgy for backend security 
+- Using Special technolgy JWT for backend security 

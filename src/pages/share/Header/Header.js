@@ -49,6 +49,9 @@ const Header = () => {
                                 <Nav.Link as={Link} to='/myitem'>
                                     My Item
                                 </Nav.Link>
+                                <Nav.Link as={Link} to='/m'>
+                                    {user.email}
+                                </Nav.Link>
                                 <button onClick={logout} style={{ color: "#182D36" }} className=' btn btn-light  fs-6 fw-bold'>Log Out</button>
                             </> :
                                 <>
