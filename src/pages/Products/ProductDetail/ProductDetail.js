@@ -34,26 +34,26 @@ const ProductDetail = () => {
 
 
     // update quantity 
-    const handleUpdate = event => {
-        event.preventDefault();
-        const newQuantity = event.target.newQuantity;
+    // const handleUpdate = event => {
+    //     event.preventDefault();
+    //     const newQuantity = event.target.newQuantity;
 
-        // data send  to the server
-        const url = `https://morning-chamber-68565.herokuapp.com/items/${itemId}`;
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newQuantity)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log('success', data);
-                toast('users added successfully!!!');
-                event.target.reset();
-            })
-    }
+    //     // data send  to the server
+    //     const url = `https://morning-chamber-68565.herokuapp.com/items/${itemId}`;
+    //     fetch(url, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(newQuantity)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log('success', data);
+    //             toast('users added successfully!!!');
+    //             event.target.reset();
+    //         })
+    // }
     return (
         <div >
             <h2>Item Details</h2>
@@ -70,11 +70,11 @@ const ProductDetail = () => {
                             <p>Publisher: {item.publisher}</p>
                             <p >Quantity: {item.quantity}{ }</p>
 
-                            <button onClick={handleDeliver} className="btn btn-secondary mt-2  mb-2 w-50">Delivered</button>
+                            <button className="btn btn-secondary mt-2  mb-2 w-50">Delivered</button>
 
                             <br />
 
-                            <form onSubmit={handleUpdate} action="">
+                            <form action="">
                                 <input type="text" placeholder='Quantity' name='newQuantity' />
                                 <button className='btn btn-secondary ms-2'>Save</button>
                             </form>

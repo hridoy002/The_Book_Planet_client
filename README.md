@@ -1,6 +1,6 @@
 # Lets Start With "The Book Planet"
 
-Our Website live link [The Book Planet](https://the-book-planet.web.app/) (https://the-book-planet.web.app/).
+### Our Website live link [The Book Planet](https://the-book-planet.web.app/) (https://the-book-planet.web.app/).
 
 ## About Our Website
 
@@ -11,4 +11,5 @@ This is a products inventory management web application.A book store authority c
 - You can easily routing without loading.
 - Here use Firebase authentication system,it helps you very much.
 
-- In backend site 
+- You can add your sell details
+- Using Special technolgy for backend security 

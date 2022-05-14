@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import Social from '../../share/Social/Social';
+
 import Loading from '../../Loading/Loading';
 import { ToastContainer,toast } from 'react-toastify';
+import Social from '../../share/Social/Social';
 
 
 const Register = () => {
@@ -17,17 +18,27 @@ const Register = () => {
         loading,
         error
     ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
+
+    const [updateProfile] = useUpdateProfile(auth);
     // privacy agree state
     const [agree, setAgree] = useState(false);
     // hanlde register form 
-    const handleRegisterSubmit = event => {
+    const handleRegisterSubmit =async event => {
         event.preventDefault();
+        const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
         createUserWithEmailAndPassword(email, password);
+
+        
         if(email) {
-            toast('Sent email');
+            toast('Please Check Your Email and Verify your account');
         } 
+
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        console.log('Updated profile');
+        navigate('/home');
     }
 
     // error message 
@@ -46,7 +57,7 @@ const Register = () => {
         <div className='container my-5 '>
             <Form onSubmit={handleRegisterSubmit} className='w-75 mx-auto'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="text" placeholder="Your Name" />
+                    <Form.Control type="text" name='name' placeholder="Your Name" required/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -70,7 +81,7 @@ const Register = () => {
                 </Button>
                 <p>Already have an account?<Link className='text-info text-decoration-none' to='/login'> Please Login</Link></p>
             </Form>
-            <Social />
+            <Social/>
             <ToastContainer/>
         </div>
     );

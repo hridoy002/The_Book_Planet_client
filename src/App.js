@@ -14,9 +14,14 @@ import RequireAuth from './pages/share/RequireAuth/RequireAuth';
 import UploadProduct from './pages/UploadProduct/UploadProduct';
 import ProductDetail from './pages/Products/ProductDetail/ProductDetail';
 import ManageInventories from './pages/ManageInvetories/ManageInventories';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import About from './pages/About/About';
 import { useEffect } from 'react';
-import MyOrder from './pages/MyOrder/MyOrder';
+import Select from './pages/Select/Select';
+import MyItem from './pages/Select/MyItem/MyItem';
+
+
 
 function App() {
   useEffect(()=>{
@@ -40,13 +45,17 @@ function App() {
         <Route path='/manageInventories' element={<RequireAuth>
           <ManageInventories/>
         </RequireAuth>} />
-        <Route path='/myorder' element={<RequireAuth>
-          <MyOrder/>
+        <Route path='/select/:itemId' element={<RequireAuth>
+          <Select/>
+        </RequireAuth>} />
+        <Route path='/myitem/' element={<RequireAuth>
+            <MyItem/>
         </RequireAuth>} />
         <Route path='/about' element={<About />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
       <Footer/>
+      <ToastContainer />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import useCustomHook from '../CustooHook/useCustomHook';
 import './ManageInventories.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const ManageInventories = () => {
     const [items,setItems] = useCustomHook();
@@ -21,6 +21,9 @@ const ManageInventories = () => {
                 })
         }
     }
+
+    const navigate =useNavigate();
+   
     return (
 
         <div>
@@ -34,6 +37,7 @@ const ManageInventories = () => {
                             <th>Publisher/Supplier</th>
                             <th>Unit Price</th>
                             <th>Quantity</th>
+                            <th>Select Item</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
@@ -51,6 +55,10 @@ const ManageInventories = () => {
                                         <td>{item.price}</td>
 
                                         <td>{item.quantity}</td>
+
+                                        <td><Link to={`/select/${item._id}`} > <button 
+                                        className='btn btn-success'>Select</button></Link></td>
+
                                         <td><button className='btn btn-danger' onClick={() => handleDelete(item._id)}>Delete</button></td>
                                     </tr>
                                 )

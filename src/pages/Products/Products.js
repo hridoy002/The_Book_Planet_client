@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Products.css'
 const Products = ({ item }) => {
     const { _id, name, img, description, writer, price, quantity,publisher } = item;

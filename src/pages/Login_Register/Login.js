@@ -4,10 +4,10 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css'
-import Social from '../share/Social/Social';
 import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Social from '../share/Social/Social';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -76,8 +76,8 @@ const Login = () => {
                     }
                 }} className='btn btn-link text-decoration-none text-success'>Reset Password</button></p>
             </Form>
+            <Social/>
             <ToastContainer/>
-            <Social />
 
         </div>
     );
