@@ -9,24 +9,37 @@ const ProductDetail = () => {
     const [quantity, setQuantity] = useState(0);
     const [item, setItem] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/items/${itemId}`)
+        fetch(`https://morning-chamber-68565.herokuapp.com/items/${itemId}`)
             .then(res => res.json())
             .then(data => setItem(data));
     }, [])
 
-    const handleDeliver = () => {
-        if (quantity > 0) {
-            setQuantity(quantity - 1)
-            console.log(setQuantity)
-        }
-    }
+    // const handleDeliver = () => {
+    //     console.log()
+    //     const url = `https://morning-chamber-68565.herokuapp.com/items/${itemId}`;
+    //     fetch(url, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(newQuantity)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if(data.newQuantity === 1){
+    //                 setQuantity(quantity + 1);
+    //             }
+    //         })
+    // }
+
+
     // update quantity 
     const handleUpdate = event => {
         event.preventDefault();
         const newQuantity = event.target.newQuantity;
 
         // data send  to the server
-        const url = `http://localhost:5000/items/${itemId}`;
+        const url = `https://morning-chamber-68565.herokuapp.com/items/${itemId}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -71,7 +84,7 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
-        <ToastContainer/>
+            <ToastContainer />
         </div>
     );
 };

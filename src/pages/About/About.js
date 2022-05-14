@@ -9,8 +9,8 @@ import { Carousel } from 'react-bootstrap';
 
 const About = () => {
     return (
-        <div className='my-5'>
-            <h2 className='mb-3'>About Us</h2>
+        <div className='my-5 container'>
+ 
             <Carousel>
                 <Carousel.Item interval={1000}>
                     <img

@@ -16,6 +16,7 @@ import ProductDetail from './pages/Products/ProductDetail/ProductDetail';
 import ManageInventories from './pages/ManageInvetories/ManageInventories';
 import About from './pages/About/About';
 import { useEffect } from 'react';
+import MyOrder from './pages/MyOrder/MyOrder';
 
 function App() {
   useEffect(()=>{
@@ -38,6 +39,9 @@ function App() {
         </RequireAuth>} />
         <Route path='/manageInventories' element={<RequireAuth>
           <ManageInventories/>
+        </RequireAuth>} />
+        <Route path='/myorder' element={<RequireAuth>
+          <MyOrder/>
         </RequireAuth>} />
         <Route path='/about' element={<About />} />
         <Route path='/*' element={<NotFound />} />

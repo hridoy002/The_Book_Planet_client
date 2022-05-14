@@ -9,7 +9,7 @@ const ManageInventories = () => {
         const accept = window.confirm('Are you sure want to delete?');
         if (accept) {
             console.log('Delete a Product',id) 
-            fetch(`http://localhost:5000/items/${id}`, {
+            fetch(`https://morning-chamber-68565.herokuapp.com/items/${id}`, {
 
                 method: 'DELETE' 
             })

@@ -40,7 +40,13 @@ const Blogs = () => {
                 <Accordion.Item eventKey="3">
                     <Accordion.Header>What is the purpose of JWT and how does it work?</Accordion.Header>
                     <Accordion.Body>
-                        JWT or JSON Web Token is an open standard .It is using to share security info between client and server.
+                        JWT or JSON Web Token is an open standard .It is using to share security info between client and server.It secure server.
+                        <br />
+                       <b> How does it work:  </b>
+                        When user want to login,server create a token and send it to user.Then it save a memory.After then when client makes any request ,a copy of the token send to server for authorization.
+                        Server verify the token and give the permission.
+
+
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>

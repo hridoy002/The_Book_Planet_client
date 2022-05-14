@@ -1,7 +1,7 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Products.css'
 const Products = ({ item }) => {
-    const { _id, name, img, description, writer, price, quantity } = item;
+    const { _id, name, img, description, writer, price, quantity,publisher } = item;
 
     const navigate = useNavigate()
     const navigateItem = id => {
@@ -22,9 +22,11 @@ const Products = ({ item }) => {
                         <p className="card-text">Author:{writer}</p>
                         <p className="card-text">Price: {price} ৳</p>
                         <p className="card-text"><small className="text-muted" >Quantity:{quantity}</small></p>
+                        <p>Publisher/Supplier:{publisher}</p>
                         <div>
                             <button className='mt-auto btn btn-secondary' onClick={() => navigateItem(_id)}>Update</button>
                         </div>
+                        
                     </div>
 
                 </div>

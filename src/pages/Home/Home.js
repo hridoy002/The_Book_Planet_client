@@ -9,10 +9,11 @@ import jahangir from '../../images/author/jahangir.jpg'
 
 import reading from "../../images/reading.jpg"
 import './Home.css'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [items] = useCustomHook();
-    const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }, { name: 'Page A', uv: 400, pv: 2400, amt: 2400 }, { name: 'Page A', uv: 400, pv: 2400, amt: 2400 }, { name: 'Page A', uv: 400, pv: 2400, amt: 2400 }, { name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
+    
     return (
         <div>
             {/* banner section  */}
@@ -37,7 +38,8 @@ const Home = () => {
                         <p>
                         If you're interested in reading more books but need some motivation, this article's for you. After all, when you understand the importance of reading books, you're more likely to do it.
                         </p>
-                        <button className='btn btn-lg' style={{backgroundColor:"#182D36",color:"white"}}>Read More</button>
+                        <button data-aos="fade-right" data-aos-delay="200"
+                    data-aos-duration="1500" className='btn btn-lg' style={{backgroundColor:"#182D36",color:"white"}}>Read More</button>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="90"
                     data-aos-duration="1500"
@@ -57,6 +59,7 @@ const Home = () => {
                         )
                     }
                 </div>
+                <Link to={'/manageInventories'}> <button className='btn btn-lg w-50 mb-5 text-light' style={{backgroundColor:"#182D36"}} > Manage Inventory</button> </Link>
             </div>
 
             {/* bonus part chart */}

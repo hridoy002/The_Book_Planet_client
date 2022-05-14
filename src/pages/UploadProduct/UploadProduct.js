@@ -18,7 +18,7 @@ const UploadProduct = () => {
         const book = {name,writer,description,publisher,price,quantity,img};
         
         // send data to server 
-        const url =`http://localhost:5000/items/`;
+        const url =`https://morning-chamber-68565.herokuapp.com/items/`;
         fetch(url,{
             method:'POST',
             headers:{
