@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
 import useCustomHook from '../CustooHook/useCustomHook';
 import useItem from '../CustooHook/useItem';
 
@@ -36,7 +37,7 @@ const Select = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('Item Selcted');
+                toast('Item Selcted');
                 event.target.reset()
             })
     }

@@ -6,32 +6,44 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ProductDetail = () => {
     const { itemId } = useParams();
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(10);
+    const [update,setUptade] = useState(0);
     const [item, setItem] = useState({});
     useEffect(() => {
         fetch(`https://morning-chamber-68565.herokuapp.com/items/${itemId}`)
             .then(res => res.json())
             .then(data => setItem(data));
     }, [])
+   
+    const handleDeliver = () => {
+        console.log()
+        if(quantity>0){
+            setQuantity(quantity - 1);
+        }
+        
+        // const url = `https://morning-chamber-68565.herokuapp.com/items/${itemId}`;
+        // fetch(url, {
+        //     method: 'PUT',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(newQuantity)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         if(data.newQuantity === 1){
+        //             setQuantity(quantity + 1);
+        //         }
+        //     })
+    }
 
-    // const handleDeliver = () => {
-    //     console.log()
-    //     const url = `https://morning-chamber-68565.herokuapp.com/items/${itemId}`;
-    //     fetch(url, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(newQuantity)
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if(data.newQuantity === 1){
-    //                 setQuantity(quantity + 1);
-    //             }
-    //         })
-    // }
-
+    const handleUpdate = e =>{
+        e.preventDefault();
+        const inputQuantity = e.target.newQuantity.value;
+        console.log(inputQuantity);
+        setUptade( inputQuantity);
+        e.target.reset()
+    }
 
     // update quantity 
     // const handleUpdate = event => {
@@ -68,13 +80,14 @@ const ProductDetail = () => {
                             <p>Author: {item.writer}</p>
                             <small>ID: {item._id}</small>
                             <p>Publisher: {item.publisher}</p>
-                            <p >Quantity: {item.quantity}{ }</p>
+                            <p>Price: {item.price}</p>
+                            <p >Quantity: {update}</p>
 
-                            <button className="btn btn-secondary mt-2  mb-2 w-50">Delivered</button>
+                            <button onClick={handleDeliver} className="btn btn-secondary mt-2  mb-2 w-50">Delivered</button>
 
                             <br />
 
-                            <form action="">
+                            <form onSubmit={handleUpdate} action="">
                                 <input type="text" placeholder='Quantity' name='newQuantity' />
                                 <button className='btn btn-secondary ms-2'>Save</button>
                             </form>
