@@ -13,3 +13,5 @@ This is a products inventory management web application.A book store authority c
 
 - You can add your sell details
 - Using Special technolgy JWT for backend security 
+
+<!-- private to public  -->
